@@ -75,7 +75,7 @@ end
 ]]--
 
 local window = lib:CreateWindow({
-	Title = "INSANELY OP ESP | Pilgrammed",
+	Title = "INSANELY OP ESP/AUTOFARM | Pilgrammed",
 	Center = true,
 	AutoShow = true,
 })
@@ -83,7 +83,6 @@ local window = lib:CreateWindow({
 local Tabs = {
     esptab = window:AddTab("Esp"),
     autotab = window:AddTab("Autofarms"),
-    exploittab = window:AddTab("Exploits"),
     --unsafetab = window:AddTab("Unsafe"),
     settingtab = window:AddTab("Settings"),
 }
@@ -116,7 +115,7 @@ chestgroup:AddSlider("ChestSlider",{
     Compact = false,
 })
 
-local oregroup = Tabs.esptab:AddRightGroupbox("Ores")
+local oregroup = Tabs.esptab:AddRightGroupbox("Mining")
 
 oregroup:AddDropdown("SelectOre",{
     Values = {"Copper","Tin","Zinc","Iron","Sulfur","Emerald","Ruby","Sapphire","Mithril","Demetal","Diamond","Darksteel"},
@@ -171,7 +170,8 @@ fishgroup:AddToggle("AutoFish",{
 })
 
 fishgroup:AddLabel("Have water on the btm right corner")
-fishgroup:AddLabel("This obviously requires a fishing rod")
+fishgroup:AddLabel("This obviously requires")
+fishgroup:AddLabel("a fishing rod")
 --[[
 local cooldowngroup = Tabs.exploittab:AddLeftGroupbox("Cooldowns")
 
@@ -472,3 +472,4 @@ SaveManager:SetFolder('Obsidian/'..tostring(game.PlaceId))
 SaveManager:BuildConfigSection(Tabs.settingtab)
 ThemeManager:ApplyToTab(Tabs.settingtab)
 lib:Notify("Made by zell#1337") -- For Credits (Don't remove)
+
